@@ -5,8 +5,6 @@
  * @license Apache-2.0
  */
 
-package traq;
-
 import javax.swing.*;
 import traq.models.Project;
 
