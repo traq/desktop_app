@@ -6,7 +6,11 @@
  */
 
 import javax.swing.*;
+
+import java.util.ArrayList;
+
 import traq.models.Project;
+import traq.models.Site;
 
 /**
  * Main application.
@@ -23,7 +27,10 @@ public class Traq {
                 mainWindow.setSize(600,500);
                 mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-                Project testProject = new Project(0, "Test", "testing", "Just a test");
+                Site currentSite = new Site("Traq", "https://bugs.traq.io");
+
+                ArrayList<Project> projects = currentSite.getProjects();
+                Project testProject = projects.get(0);
 
                 JPanel testPanel = new JPanel();
                 JLabel projectName = new JLabel(testProject.getName());
